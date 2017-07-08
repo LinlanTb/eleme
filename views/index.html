@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="initial-scale=0.5,minimum-scale=0.5,maximum-scale=0.5,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="./css/index.css"/>
+		<link rel="stylesheet" href="./css/swiper-3.4.2.min.css" />
+	</head>
+	<body>
+		<div id="header">
+			<div class="area">
+				江干区九堡镇
+			</div> 
+			<div class="weather">
+				<p class="tem">21°</p>
+				<p class="wthType">阴</p>
+				<img src="./img/icons/icon_weather.png"/>
+			</div>
+		</div>
+		<div id="section">
+			
+		</div>
+		<div id="footer">
+			<div id="eleme" class="active">外卖</div>
+			<div id="find">发现</div>
+			<div id="book">订单</div>
+			<div id="mine">我的</div>
+		</div>
+	</body>
+	<script src="./js/zepto.min.js"></script>
+	<script src="./js/iscroll.js"></script>
+	<script src="./js/swiper-3.4.2.min.js"></script>
+	<script type="text/javascript">
+		(function(){
+			var screenW = window.screen.width;
+			var oHtml = $("html");
+			oHtml.css("font-size",(100*screenW/500)+"px");
+		})();
+		var ItemDiv = $("#footer div");
+		var section = $("#section");
+		
+		$.ajax({
+			type:"get",
+			url:"http://127.0.0.1:3000/eleme",
+			success:function(res){
+				section.html(res);
+			}
+		})
+		ItemDiv.tap(function(){
+			$(this).addClass("active").siblings().removeClass("active");
+			$.ajax({
+				type:"get",
+				url:"http://127.0.0.1:3000/"+$(this).attr("id"),
+				success:function(res){
+					console.log(res)
+					section.html(res);
+				}
+			})
+		});
+	</script>
+</html>

@@ -1,0 +1,106 @@
+#elemebox{
+	width:100%;
+	overflow:hidden;
+}
+ul,li{
+	list-style: none;
+}
+.headtop{
+	height:2rem;
+	background:#0096FF;
+	overflow:hidden;
+	padding:0 .373333rem;
+}
+#search{
+	display: block;
+    margin: .2rem 0;
+    width: 100%;
+    height: .96rem;
+    text-align: center;
+    border-radius: .96rem;
+    border:none;
+    box-shadow: 0 0.026667rem 0.066667rem 0 rgba(0,0,0,.2);
+    color: #333;
+    font-size: .346667rem;
+}
+#scroll{
+	overflow:hidden;
+	height:0.84rem;
+}
+#wrap{
+	overflow:hidden;
+	width:160%;
+}
+#wrap li{
+	float:left;
+	padding:0 .3rem .1rem .2rem;
+	font-size:0.34rem;
+	color:#fff;
+}
+.container{
+	position:relative;
+	height:5rem;
+	box-sizing: border-box;
+	border-bottom:0.3rem solid #eee;
+}
+.swiper-slide a{
+	display:block;
+    position: relative;
+    float: left;
+    margin-top: .293333rem;
+    width: 25%;
+    text-align: center;
+    text-decoration: none;
+	color:#666;
+}
+.swiper-slide img{
+	width:1.2rem;
+}
+.swiper-slide span{
+	display: block;
+	width:100%;
+	text-align: center;
+	font-size:0.32rem;
+	margin-top:-0.2rem;
+}
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #000;
+}
+.shoplist li{
+	padding: .4rem .266667rem;
+	overflow: hidden;
+	height:1.6rem;
+}
+.shoplist img{
+	float:left;
+	height:100%;
+}
+.produce{
+	float:left;
+	padding-left:0.3rem;
+	width:7.565rem;
+	height:100%;
+}
+.shopname{
+	overflow:hidden;
+}
+.shopname h3{
+	font-size:0.3rem;
+	width:5.5rem;
+	float:left;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.shopname span{
+	float:right;
+	font-size:0.26rem;
+}
+.appraise span{
+	width:0.1rem;
+	background:url(../img/xx/xx.png) no-repeat center;
+	background-size:cover;
+	display:inline-block;
+	height:0.1rem;
+}
